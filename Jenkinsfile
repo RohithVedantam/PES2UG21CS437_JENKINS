@@ -53,7 +53,7 @@ pipeline {
         }
         success {
             script {
-                // Print the repository URL
+                // Introducing error here by attempting to access undefined variable
                 def repositoryUrl = sh(script: 'git config --get remote.origin.url', returnStdout: true).trim()
                 echo "Repository URL: ${repositoryUrl}"
             }
